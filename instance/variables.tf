@@ -13,3 +13,6 @@ variable "subnet_id" {
 variable "ami_id" {
 
 }
+variable "user_data" {
+
+}

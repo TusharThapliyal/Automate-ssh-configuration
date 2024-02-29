@@ -21,6 +21,7 @@ module "instance" {
   sg_id         = module.securityGroup.sg_id
   subnet_id     = module.network.my_subnet_id
   ami_id        = module.ami.ami_id
+  user_data     = templatefile("./userdata/user-data.tpl", {})
 }
 module "awsKeyPair" {
   source = "./awsKeyPair"
