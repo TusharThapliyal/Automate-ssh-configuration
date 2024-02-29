@@ -14,3 +14,17 @@ module "securityGroup" {
   source    = "./securityGroup"
   my_vpc_id = module.network.my_vpc_id
 }
+module "instance" {
+  source        = "./instance"
+  instance_type = var.instance_type
+  aws_auth      = module.awsKeyPair.key_id
+  sg_id         = module.securityGroup.sg_id
+  subnet_id     = module.network.my_subnet_id
+  ami_id        = module.ami.ami_id
+}
+module "awsKeyPair" {
+  source = "./awsKeyPair"
+}
+module "ami" {
+  source = "./ami"
+}

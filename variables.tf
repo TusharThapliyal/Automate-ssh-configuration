@@ -11,3 +11,6 @@ variable "cidr_subet" {
 variable "az" {
 
 }
+variable "instance_type" {
+
+}
