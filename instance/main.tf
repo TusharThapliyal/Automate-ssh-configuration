@@ -11,4 +11,14 @@ resource "aws_instance" "web-server" {
   tags = {
     Name = "web-server"
   }
+  provisioner "local-exec" {
+    command     = templatefile("${var.host_os}-ssh-config.tpl", { hostname = self.public_ip, user = "ubuntu", identityfile = "~/.ssh/aws_key_pair" })
+    interpreter = var.host_interpreter
+  }
 }
+/* tamplatefile("just the file name", {variable used in the tpl file})
+
+  provisioner are not tracked by state file. so if you add provisioner to your file it will not trigger any new changes or trigger terraform apply. 
+
+  use terraform apply -replace <name of the resource>
+  */
