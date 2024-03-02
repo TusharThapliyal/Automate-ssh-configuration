@@ -1,6 +1,8 @@
-# Remote development environment on AWS using Terraform
+# Automating SSH configuration
 
-creating a remote development environment on AWS using ```provisioner "local-exec"``` in Terraform.
+automate configuring SSH settings on local machines for every new remote server we create on AWS by using ```provisioner "local-exec"``` in Terraform.
+## Use case
+Using the "local-exec" provisioner in Terraform to make changes to the .ssh/config file is a common use case for configuring SSH settings on local machines. For example, if you have multiple servers that you frequently SSH into, you can use Terraform to dynamically update your .ssh/config file with the necessary configuration for each server. This can help streamline your SSH workflow and make it easier to manage your SSH connections.
 
 ## Installation
 1. Initialise terraform directory
@@ -47,7 +49,7 @@ host_interpreter=["bash","-c"] # replace it with ["powershell","-command"] for w
 
 host_os=mac # replace it with "windows" for windows user
 ```
-## Setting up Remote development using ssh
+## Setting up template file for ~/.ssh/config
  - create a ``mac-ssh-config.tpl`` file
 ```bash
 cat << EOF >> ~/.ssh/config
@@ -73,4 +75,4 @@ Host ${hostname}
 variables for this file will are defined within provisioner block.
 
 ## VS code extensions
-Download remote ssh extension in VScode to connect to your remote instance.
+Download ```remote ssh``` extension in VScode to connect to your remote instance.
