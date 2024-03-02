@@ -1,6 +1,6 @@
 # Using Terraform to create remote development using ssh
 
-creating a local development environment on VSCode using provisioner "local-exec" in Terraform.
+creating a remote development environment on AWS using ```provisioner "local-exec"``` in Terraform.
 
 ## Installation
 1. Initialise terraform directory
