@@ -1,4 +1,4 @@
-# Using Terraform to create remote development using ssh
+# Remote development environment on AWS using Terraform
 
 creating a remote development environment on AWS using ```provisioner "local-exec"``` in Terraform.
 
