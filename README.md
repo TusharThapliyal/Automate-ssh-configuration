@@ -15,7 +15,7 @@ terraform init
 ```bash
 terraform plan
 ```
-3.Provision AWS infrastructure
+3. Provision AWS infrastructure
 
 ```bash
 terraform apply -auto-approve
