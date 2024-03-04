@@ -32,7 +32,7 @@ After running the above command you will have :
 ## provisioner "local-exec"
 local-exec is used to run commands on your local machiner after ``terraform apply`` command is used.
 
- command =templaterfile() will lok for the file specified and run commands in that file.
+ command =templaterfile() will look for the file specified and run commands in that file.
 
 In this code, local-exec will run a ``mac-ssh-config.tpl`` file containing necessary code to create a local ssh development environment.
 
