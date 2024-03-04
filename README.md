@@ -47,7 +47,7 @@ variables are defined in ``terraform.tfvars``
 ```hcl
 host_interpreter=["bash","-c"] # replace it with ["powershell","-command"] for windows user
 
-host_os=mac # replace it with "windows" for windows user
+host_os="mac-linux" # replace it with "windows" for windows user
 ```
 ## Setting up template file for ~/.ssh/config
  - create a ``mac-ssh-config.tpl`` file
