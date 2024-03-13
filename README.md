@@ -74,5 +74,8 @@ Host ${hostname}
 ```
 variables for this file will are defined within provisioner block.
 
+## Note
+If you ever decide to go with some other AWS AMI, other than Ubuntu, You will need to change the username in configuration tpl file. default username for ubuntu = "ubuntu" default username for Amazon Linux = "ec2-user". 
+
 ## VS code extensions
 Download ```remote ssh``` extension in VScode to connect to your remote instance.
